@@ -530,7 +530,7 @@ exams: [
     day: "الثلاثاء",
     name: "امتحان تخدير نظري",
     dept: "anesthesia",
-    notes: ["n101"],
+    notes: ["n101","n102","n103","n104","n105","n106","n107","n108"],
     courses: ["الكورس الأول"],
     remarks: "قاعة 6",
     examType: " وهمي مد ثاني"
@@ -1011,4 +1011,5 @@ let notesLinks = e.notes.map(id=>{
 }).join(', ');
 
 });
+
 
