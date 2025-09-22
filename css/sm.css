@@ -6,6 +6,23 @@
 html,body{height:100%}
 body{font-family:Inter,system-ui,Segoe UI,Roboto; background:linear-gradient(180deg,var(--bg),var(--bg-2)); color:var(--text); -webkit-font-smoothing:antialiased}
 .container{max-width:1150px;margin:0 auto;padding:18px}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+}
+@media(max-width:1024px){ .grid-3{grid-template-columns:repeat(2,1fr)} }
+
+@media(max-width:720px){
+  .grid-3,.grid-2{grid-template-columns:1fr}
+}
+
 /*تنسيف الدخول لعبارة */
 :root {
   --bg:#07142a;
@@ -411,5 +428,6 @@ body {
 .logo span {
   font-family: 'Cairo', sans-serif;
 }
+
 
 
