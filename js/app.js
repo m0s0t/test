@@ -1001,4 +1001,13 @@ document.querySelectorAll('.modal-close').forEach(btn => {
     const modal = btn.closest('.modal');
     modal.classList.remove('show');
   });
+window.addEventListener('resize', apply);
+let notesLinks = e.notes.map(id=>{
+  const n=DB.notes.find(x=>x.id===id);
+  if(!n) return '';
+  return window.innerWidth < 768 
+         ? `<a href="${n.file}" download>${escapeHtml(n.title).slice(0,10)}...</a>` 
+         : `<a href="${n.file}" download>${escapeHtml(n.title)}</a>`;
+}).join(', ');
+
 });
