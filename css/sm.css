@@ -258,34 +258,17 @@ body {
 }
 
 /* footer */
-.site-footer{
-  margin-top:22px;
-  padding:12px 0;
-  border-top:1px solid rgba(255,255,255,.03);
-  text-align:center;
-  font-size:14px;
-  color:var(--muted);
-}
-
-/* responsive adjustments للشاشات المتوسطة */
-@media(max-width:1024px){
-  .grid-3{grid-template-columns:repeat(2,1fr)}
-}
-
-@media(max-width:720px){
-  .grid-3,.grid-2{grid-template-columns:1fr}
-  .nav{flex-direction:column;align-items:flex-start;gap:8px}
-  nav a{padding:8px 12px;width:100%}
-  body,input,button{font-size:14px}
-}
 .site-footer {
+  margin-top: 22px;
   padding: 30px 18px;
   background: var(--bg-2);
   color: var(--muted);
   font-size: 14px;
   border-top: 1px solid rgba(255,255,255,.05);
+  text-align: center;
 }
 
+/* عناصر داخل الفوتر */
 .footer-flex {
   display: flex;
   justify-content: space-between;
@@ -335,8 +318,18 @@ body {
   margin-top: 12px;
 }
 
+/* responsive adjustments للشاشات المتوسطة */
+@media(max-width:1024px){
+  .grid-3{grid-template-columns:repeat(2,1fr)}
+}
+
 /* موبايل */
-@media (max-width: 720px) {
+@media(max-width:720px){
+  .grid-3,.grid-2{grid-template-columns:1fr}
+  .nav{flex-direction:column;align-items:flex-start;gap:8px}
+  nav a{padding:8px 12px;width:100%}
+  body,input,button{font-size:14px}
+
   .footer-flex {
     flex-direction: column;
     align-items: center;
@@ -418,4 +411,5 @@ body {
 .logo span {
   font-family: 'Cairo', sans-serif;
 }
+
 
